@@ -31,8 +31,9 @@ export default class FormBook extends Component {
 
   render() {
     return (
-      <div className="container">
-        <form>
+      <div>
+      <h1 className="text-center">Add Book List</h1>
+        <form className="container">
           <div className="form-group">
             <label for="exampleInputURLimage1">URLimage</label>
             <input
@@ -73,6 +74,7 @@ export default class FormBook extends Component {
               placeholder="Enter Description"
             />
           </div>
+          <div className="text-center pb-3">
           <button
             type="button"
             onClick={() => this.onSummit()}
@@ -80,6 +82,7 @@ export default class FormBook extends Component {
           >
             Submit
           </button>
+          </div>
         </form>
       </div>
     );
