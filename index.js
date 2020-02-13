@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 import Hello from './Hello';
+import Book from './Book'
+import FormBook from './FormBook'
 import './style.css';
 
 class App extends Component {
@@ -14,13 +16,15 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Hello name={this.state.name} />
-        <p>
-          Start editing to see some magic happen :)
-        </p>
+      <Book/>
       </div>
     );
   }
 }
 
 render(<App />, document.getElementById('root'));
+
+// ImageURL
+// title
+// author
+// description
