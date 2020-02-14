@@ -30,31 +30,31 @@ export default class Book extends Component {
             this.bookStore(data);
           }}
         />
+        <div className="row">
         {this.state.bookList.map((book, i) => {
           return (
-            <div className="card-deck">
-              <div className="card">
-                <img
-                  className="card-img-top"
-                  src={book.urlImage}
-                />
-                <div className="card-body">
-                  <h5 className="card-title">{book.title}</h5>
-                  <p className="card-text">{book.description}</p>
-                </div>
-                <div className="card-footer">
-                  <small className="text-muted">{book.author}</small>
-                </div>
-                <button
-                  className="btn btn-danger"
-                  onClick={() => {
-                    this.deleteBook(i);
-                  }}
-                >
-                  Delete
-                </button>
+            <div className="col-3 pb-3">
+                <div className="card-deck">
+                  <div className="card">
+                    <img className="card-img-top" src={book.urlImage} />
+                    <div className="card-body">
+                      <h5 className="card-title">{book.title}</h5>
+                      <p className="card-text">{book.description}</p>
+                    </div>
+                    <div className="card-footer">
+                      <small className="text-muted">{book.author}</small>
+                    </div>
+                    <button
+                      className="btn btn-danger"
+                      onClick={() => {
+                        this.deleteBook(i);
+                      }}
+                    >
+                      Delete
+                    </button>
+                  </div>
               </div>
-            </div>
+              </div>
             // <div className="card">
             //   <img className="card-img-top" src={book.urlImage} />
             //   <div className="card-body">
@@ -68,6 +68,7 @@ export default class Book extends Component {
             // </div>
           );
         })}
+      </div>
       </div>
     );
   }
